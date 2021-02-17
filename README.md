@@ -20,7 +20,7 @@ QuickFlicks is an app that allows users to browse movies from the [The Movie Dat
 - [X] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-<img src="http://g.recordit.co/UAS5SW1bZr.gif" width=250><br>
+<img src="http://g.recordit.co/IqeHMm3vH0.gif" width=250><br>
 
 ### Notes
 I had trouble figuring out how to get through the security measures to run the app on my Ipad.
