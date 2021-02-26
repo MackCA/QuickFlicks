@@ -109,6 +109,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-mO-4C5">
                                 <rect key="frame" x="0.0" y="228" width="139" height="202"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="8Uu-hN-T9D"/>
                                     <constraint firstAttribute="width" constant="139" id="8pI-9P-Ncp"/>
@@ -156,7 +157,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijM-SR-5XK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1504.3478260869567" y="2788.04347826087"/>
+            <point key="canvasLocation" x="-775" y="2765"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="f2c-jF-5MT">
+            <objects>
+                <viewController id="zXO-BJ-eFC" customClass="TrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8y-g2-qC7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYp-gD-9YB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsInlineMediaPlayback="YES">
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LCh-Lo-ZGz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="EYp-gD-9YB" id="H2D-ND-rao"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfl-oB-WG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.56521739130437" y="2763.5869565217395"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vKe-Qa-36P">
@@ -174,7 +205,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1q0-xE-E4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-775" y="305"/>
+            <point key="canvasLocation" x="-775" y="270"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="Lvm-QU-KhZ">
@@ -234,6 +265,7 @@
                                         <size key="customSize" width="200" height="253"/>
                                         <connections>
                                             <outlet property="posterView" destination="gJ6-7C-0l5" id="Yrb-cw-Fzk"/>
+                                            <segue destination="ZAC-mi-S0x" kind="show" id="fN9-UG-9Va"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -271,6 +303,9 @@
             <point key="canvasLocation" x="2.8037383177570092" y="1029.5896328293736"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fN9-UG-9Va"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>

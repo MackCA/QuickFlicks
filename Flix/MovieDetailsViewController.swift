@@ -15,6 +15,9 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsysLabel: UILabel!
     
+    @IBAction func trailerTrigger(_ sender: UITapGestureRecognizer) {
+        
+    }
     
     
     
@@ -40,14 +43,19 @@ class MovieDetailsViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+
+        let id = movie["id"] as! String
+        let trailer = "https://api.themoviedb.org/3/movie/"+id+"/videos?api_key=<<api_key>>&language=en-US"
         // Pass the selected object to the new view controller.
+        let trailerViewController = segue.destination as! TrailerViewController
+        trailerViewController.trailer = trailer
     }
-    */
+    
 
 }
